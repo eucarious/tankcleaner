@@ -12,9 +12,10 @@ corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
 
-[node name="crab" type="CharacterBody2D"]
+[node name="crab" type="CharacterBody2D" node_paths=PackedStringArray("digestTimer")]
 collision_mask = 6
 script = ExtResource("1_eojkx")
+digestTimer = NodePath("DigestTimer")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rfph2")
@@ -39,3 +40,8 @@ offset_left = -24.0
 offset_top = 29.0
 offset_right = -17.0
 offset_bottom = 36.0
+
+[node name="DigestTimer" type="Timer" parent="."]
+wait_time = 1.5
+
+[connection signal="timeout" from="DigestTimer" to="." method="_on_digest_timer_timeout"]

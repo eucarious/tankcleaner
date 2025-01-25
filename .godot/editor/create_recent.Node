@@ -1,4 +1,10 @@
 Label
+Timer
+AnimationTree
+Node
+Path2D
+VisibleOnScreenEnabler2D
+VisibleOnScreenNotifier2D
 Panel
 Sprite2D
 Polygon2D
@@ -6,8 +12,3 @@ CollisionShape2D
 CharacterBody2D
 ProgressBar
 Node2D
-StaticBody2D
-Area2D
-Node
-Control
-MeshInstance2D

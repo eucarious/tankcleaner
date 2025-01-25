@@ -28,7 +28,7 @@ position = Vector2(360, 270)
 texture = SubResource("GradientTexture2D_oq01u")
 
 [node name="crab" parent="." instance=ExtResource("2_31lju")]
-position = Vector2(368, 243)
+position = Vector2(338, 244)
 speed = 200
 
 [node name="Boundaries" type="Node2D" parent="."]
@@ -68,35 +68,20 @@ shape = SubResource("RectangleShape2D_p5i4r")
 [node name="Bubble" parent="." instance=ExtResource("3_uh0bh")]
 position = Vector2(656, 59)
 
-[node name="Bubble1" parent="." instance=ExtResource("3_uh0bh")]
+[node name="Bubble2" parent="." instance=ExtResource("3_uh0bh")]
 position = Vector2(61, 61)
 
-[node name="Bubble2" parent="." instance=ExtResource("3_uh0bh")]
+[node name="Bubble8" parent="." instance=ExtResource("3_uh0bh")]
 position = Vector2(67, 478)
 
-[node name="Bubble3" parent="." instance=ExtResource("3_uh0bh")]
+[node name="Bubble9" parent="." instance=ExtResource("3_uh0bh")]
 position = Vector2(646, 477)
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
 
 [node name="Label" type="Label" parent="."]
-offset_left = 14.0
-offset_top = 8.0
-offset_right = 66.0
-offset_bottom = 36.0
-theme_override_colors/font_color = Color(0.435294, 0.745098, 0.952941, 1)
-theme_override_font_sizes/font_size = 20
-text = "00:00"
-
-[node name="AllClean" type="Label" parent="."]
-visible = false
-offset_left = 311.0
-offset_top = 159.0
-offset_right = 416.0
-offset_bottom = 187.0
-theme_override_colors/font_color = Color(0.435294, 0.745098, 0.952941, 1)
-theme_override_font_sizes/font_size = 20
-text = "all clean :D"
+offset_right = 40.0
+offset_bottom = 23.0
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
