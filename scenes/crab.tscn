@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://b72g31c7qm1vx"]
+
+[ext_resource type="Script" path="res://scenes/crab.gd" id="1_eojkx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rfph2"]
+size = Vector2(50, 50)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4u0i1"]
+bg_color = Color(0.287886, 0.692954, 0.456591, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[node name="crab" type="CharacterBody2D"]
+collision_mask = 6
+script = ExtResource("1_eojkx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_rfph2")
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+offset_left = -15.0
+offset_top = 30.0
+offset_right = 25.0
+offset_bottom = 35.0
+max_value = 10.0
+show_percentage = false
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -25.0
+offset_top = -25.0
+offset_right = 25.0
+offset_bottom = 25.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_4u0i1")
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = -24.0
+offset_top = 29.0
+offset_right = -17.0
+offset_bottom = 36.0

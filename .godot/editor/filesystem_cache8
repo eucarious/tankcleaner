@@ -1,0 +1,12 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1737824763
+icon.svg::CompressedTexture2D::7996983198610209967::1737815762::1737815768::1::::<><>::
+::res://scenes/::1737824673
+bubble.gd::GDScript::-1::1737823996::0::1::::<>CharacterBody2D<>::
+bubble.tscn::PackedScene::2307382479178002568::1737824166::0::1::::<><>::res://scenes/bubble.gd
+bubbleChild.gd::GDScript::-1::1737824667::0::1::::<>CharacterBody2D<>::
+bubbleChild.tscn::PackedScene::394663509220703743::1737824667::0::1::::<><>::res://scenes/bubble.gd
+crab.gd::GDScript::-1::1737823194::0::1::::<>CharacterBody2D<>::
+crab.tscn::PackedScene::4688617553828217129::1737824166::0::1::::<><>::res://scenes/crab.gd
+main.gd::GDScript::-1::1737817383::0::1::::<>Node<>::
+main.tscn::PackedScene::5627846850612615352::1737824673::0::1::::<><>::res://scenes/main.gd<>uid://b72g31c7qm1vx::::res://scenes/crab.tscn<>uid://fvgbygnsvlg6::::res://scenes/bubbleChild.tscn<>uid://74yitxfkw80c::::res://scenes/bubble.tscn

@@ -1,0 +1,5 @@
+res://scenes/main.tscn
+res://scenes/bubble.gd
+res://scenes/crab.tscn
+res://scenes/bubble.tscn
+res://scenes/bubbleChild.tscn

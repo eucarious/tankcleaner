@@ -1,0 +1,99 @@
+[gd_scene load_steps=12 format=3 uid="uid://cmgf2yuegd20c"]
+
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_y2dbe"]
+[ext_resource type="PackedScene" uid="uid://b72g31c7qm1vx" path="res://scenes/crab.tscn" id="2_31lju"]
+[ext_resource type="Script" path="res://scenes/bubble.gd" id="2_beejp"]
+[ext_resource type="PackedScene" uid="uid://74yitxfkw80c" path="res://scenes/bubble.tscn" id="3_uh0bh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15vlr"]
+bg_color = Color(0.13722, 0.453619, 0.275498, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xabb"]
+
+[sub_resource type="PackedScene" id="PackedScene_fr0da"]
+_bundled = {
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("Bubble", "CharacterBody2D", "enemy", "collision_layer", "collision_mask", "script", "Sprite2D", "Sprite2D", "position", "Panel", "Panel", "offset_left", "offset_top", "offset_right", "offset_bottom", "theme_override_styles/panel", "CollisionShape2D", "CollisionShape2D", "position", "scale", "shape", "Label", "Label", "enemy", "offset_left", "offset_top", "offset_right", "offset_bottom", "text"),
+"node_count": 5,
+"node_paths": [NodePath("."), NodePath("."), NodePath("."), NodePath(".")],
+"nodes": PackedInt32Array(-1, -1, 1, 0, -1, 3, 3, 0, 4, 1, 5, 2, 1, 2, 1073741824, 0, 7, 6, -1, 1, 8, 3, 0, 1073741825, 0, 10, 9, -1, 5, 11, 4, 12, 5, 13, 6, 14, 7, 15, 8, 0, 1073741826, 0, 17, 16, -1, 3, 18, 9, 19, 10, 20, 11, 0, 1073741827, 0, 22, 21, -1, 5, 24, 12, 25, 13, 26, 14, 27, 15, 28, 16, 1, 23),
+"variants": [2, 0, ExtResource("2_beejp"), Vector2(-20, -20), -20.0, -20.0, 20.0, 20.0, SubResource("StyleBoxFlat_15vlr"), Vector2(1.90735e-06, 1.90735e-06), Vector2(1.98499, -1.92954), SubResource("CircleShape2D_0xabb"), -4.0, -12.0, 36.0, 11.0, "0
+"],
+"version": 3
+}
+
+[sub_resource type="Gradient" id="Gradient_psd3r"]
+colors = PackedColorArray(0.407087, 0.733227, 0.952275, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_oq01u"]
+gradient = SubResource("Gradient_psd3r")
+width = 720
+height = 540
+fill_from = Vector2(1, 1)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_otjhl"]
+size = Vector2(760, 10)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5i4r"]
+size = Vector2(10, 540)
+
+[node name="Main" type="Node"]
+script = ExtResource("1_y2dbe")
+player = SubResource("PackedScene_fr0da")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(360, 270)
+texture = SubResource("GradientTexture2D_oq01u")
+
+[node name="crab" parent="." instance=ExtResource("2_31lju")]
+position = Vector2(338, 244)
+speed = 200
+
+[node name="Boundaries" type="Node2D" parent="."]
+
+[node name="BoundaryUp" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(360, -5)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/BoundaryUp"]
+shape = SubResource("RectangleShape2D_otjhl")
+
+[node name="BoundaryDown" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(360, 545)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/BoundaryDown"]
+shape = SubResource("RectangleShape2D_otjhl")
+
+[node name="BoundaryLeft" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(-5, 270)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/BoundaryLeft"]
+shape = SubResource("RectangleShape2D_p5i4r")
+
+[node name="BoundaryRight" type="StaticBody2D" parent="Boundaries"]
+position = Vector2(725, 270)
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boundaries/BoundaryRight"]
+shape = SubResource("RectangleShape2D_p5i4r")
+
+[node name="Bubble" parent="." instance=ExtResource("3_uh0bh")]
+position = Vector2(173, 231)
+
+[node name="Bubble2" parent="." instance=ExtResource("3_uh0bh")]
+position = Vector2(125, 90)
+
+[node name="Bubble3" parent="." instance=ExtResource("3_uh0bh")]
+position = Vector2(317, 126)

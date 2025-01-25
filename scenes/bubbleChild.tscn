@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://b41ydr6u34mqf"]
+
+[ext_resource type="Script" path="res://scenes/bubble.gd" id="1_bcm8r"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_15vlr"]
+bg_color = Color(0.13722, 0.453619, 0.275498, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0xabb"]
+
+[node name="Bubble" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_bcm8r")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-20, -20)
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_15vlr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.90735e-06, 1.90735e-06)
+scale = Vector2(1.98499, -1.92954)
+shape = SubResource("CircleShape2D_0xabb")
+
+[node name="Label" type="Label" parent="." groups=["enemy"]]
+offset_left = -4.0
+offset_top = -12.0
+offset_right = 36.0
+offset_bottom = 11.0
+text = "0
+"
