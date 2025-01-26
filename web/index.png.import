@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhs3yl6sxk82m"
-path="res://.godot/imported/FGJ2025but2D.png-f953ed5e79bbd7b5a4d01453a22acdd2.ctex"
+uid="uid://ccs4sxqtx48u4"
+path="res://.godot/imported/index.png-80964ad67552d78b1e33f58ad16188ff.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://web/FGJ2025but2D.png"
-dest_files=["res://.godot/imported/FGJ2025but2D.png-f953ed5e79bbd7b5a4d01453a22acdd2.ctex"]
+source_file="res://web/index.png"
+dest_files=["res://.godot/imported/index.png-80964ad67552d78b1e33f58ad16188ff.ctex"]
 
 [params]
 
