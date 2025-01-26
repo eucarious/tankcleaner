@@ -20,6 +20,11 @@ config/icon="res://icon.svg"
 window/size/viewport_width=720
 window/size/viewport_height=540
 
+[editor]
+
+movie_writer/mjpeg_quality=1.0
+movie_writer/movie_file="B:/Godot/fgj2025but2d/Tank Cleaner.avi"
+
 [input]
 
 left={

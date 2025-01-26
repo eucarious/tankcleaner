@@ -1,17 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cmgf2yuegd20c"]
+[gd_scene load_steps=7 format=3 uid="uid://cmgf2yuegd20c"]
 
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_y2dbe"]
+[ext_resource type="Texture2D" uid="uid://cx1u5geu17uis" path="res://scenes/TankCleaner.png" id="2_0hn0e"]
 [ext_resource type="PackedScene" uid="uid://b72g31c7qm1vx" path="res://scenes/crab.tscn" id="2_31lju"]
 [ext_resource type="PackedScene" uid="uid://74yitxfkw80c" path="res://scenes/bubble.tscn" id="3_uh0bh"]
-
-[sub_resource type="Gradient" id="Gradient_psd3r"]
-colors = PackedColorArray(0.407087, 0.733227, 0.952275, 1, 1, 1, 1, 1)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_oq01u"]
-gradient = SubResource("Gradient_psd3r")
-width = 720
-height = 540
-fill_from = Vector2(1, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_otjhl"]
 size = Vector2(760, 10)
@@ -25,7 +17,7 @@ gameTimer = NodePath("Timer")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(360, 270)
-texture = SubResource("GradientTexture2D_oq01u")
+texture = ExtResource("2_0hn0e")
 
 [node name="crab" parent="." instance=ExtResource("2_31lju")]
 position = Vector2(368, 243)
@@ -85,7 +77,7 @@ offset_left = 14.0
 offset_top = 8.0
 offset_right = 66.0
 offset_bottom = 36.0
-theme_override_colors/font_color = Color(0.435294, 0.745098, 0.952941, 1)
+theme_override_colors/font_color = Color(0.843137, 0.815686, 0.768627, 1)
 theme_override_font_sizes/font_size = 20
 text = "00:00"
 
@@ -95,8 +87,17 @@ offset_left = 311.0
 offset_top = 159.0
 offset_right = 416.0
 offset_bottom = 187.0
-theme_override_colors/font_color = Color(0.435294, 0.745098, 0.952941, 1)
+theme_override_colors/font_color = Color(0.435294, 0.352941, 0.74902, 1)
 theme_override_font_sizes/font_size = 20
 text = "all clean :D"
 
+[node name="Button" type="Button" parent="AllClean"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 33.0
+offset_right = 94.0
+offset_bottom = 64.0
+text = "try again?"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="AllClean/Button" to="." method="_on_button_pressed"]
