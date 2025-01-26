@@ -1,6 +1,7 @@
-res://scenes/main.gd
 res://scenes/main.tscn
 res://scenes/bubbleChild.gd
+res://scenes/main.gd
 res://scenes/crab.tscn
 res://scenes/bubbleChild.tscn
 res://scenes/bubble.tscn
+res://scenes/main_menu.tscn

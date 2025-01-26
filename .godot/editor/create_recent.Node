@@ -1,10 +1,10 @@
+Node
 Panel
 Sprite2D
 Button
 Label
 Timer
 AnimationTree
-Node
 Path2D
 VisibleOnScreenEnabler2D
 VisibleOnScreenNotifier2D

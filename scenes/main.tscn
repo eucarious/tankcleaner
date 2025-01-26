@@ -99,5 +99,22 @@ offset_right = 94.0
 offset_bottom = 64.0
 text = "try again?"
 
+[node name="ReadyToClean" type="Label" parent="."]
+process_mode = 2
+offset_left = 295.0
+offset_top = 175.0
+offset_right = 441.0
+offset_bottom = 203.0
+theme_override_colors/font_color = Color(0.435294, 0.352941, 0.74902, 1)
+theme_override_font_sizes/font_size = 20
+text = "ready to clean?"
+
+[node name="Start" type="Button" parent="ReadyToClean"]
+layout_mode = 0
+offset_top = 30.0
+offset_right = 142.0
+offset_bottom = 61.0
+text = "let's get cleaning!"
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
-[connection signal="pressed" from="AllClean/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="ReadyToClean/Start" to="." method="_on_start_pressed"]

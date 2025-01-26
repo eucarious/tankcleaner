@@ -5,6 +5,9 @@ var gameover : bool = false
 
 @export var gameTimer : Timer
 
+func _ready():
+	get_tree().paused = true
+
 func _process(delta):
 	if get_tree().get_nodes_in_group("enemy").is_empty() and not gameover:
 		print("no more algae")
@@ -19,4 +22,8 @@ func _on_timer_timeout():
 
 func _on_button_pressed():
 	get_tree().reload_current_scene()
-	pass # Replace with function body.
+
+
+func _on_start_pressed():
+	$ReadyToClean.visible = false
+	get_tree().paused = false
